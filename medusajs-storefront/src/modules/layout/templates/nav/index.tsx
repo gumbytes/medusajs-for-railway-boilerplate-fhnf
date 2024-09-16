@@ -24,7 +24,7 @@ export default async function Nav() {
               href="/"
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
             >
-              Melan Commerce
+              Medusa Store
             </LocalizedClientLink>
           </div>
 
