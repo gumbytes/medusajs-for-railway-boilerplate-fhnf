@@ -5,8 +5,7 @@ import NextJs from "../../../common/icons/nextjs"
 
 const MedusaCTA = () => {
   return (
-    <p>Powered by <a href="https://gumbytes.com" target="_blank" rel="noopener noreferrer">Gumbytes Technologies</a></p>
-
+    <p></p>
   )
 }
 
