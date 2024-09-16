@@ -11,12 +11,6 @@ const Hero = () => {
           >
             Welcome to Melan Commerce, Your Destination for Premium Shopping!
           </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            We&apos;re excited to have you here!
-          </Heading>
         </span>
         <a
           href="/store"
