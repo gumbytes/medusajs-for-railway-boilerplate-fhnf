@@ -25,7 +25,12 @@ const Hero = () => {
           <h1 className="text-ui-fg-base" style={{ textDecoration: "underline" }}>
             Shop our collections
           </h1>
-        </a>       
+        </a>
+        <div style={{ textAlign: 'center', margin: '20px 0' }}>
+          <h2 className="text-ui-fg-base" style={{ fontSize: '1.5em' }}>
+            New version alert: <a href="https://funkyton.com/medusajs-2-0-is-finally-here/" style={{ color: '#007bff', textDecoration: 'none' }}>medusa 2.0 has been released</a> ← Check it out!
+          </h2>
+        </div>
       </div>
     </div>
   )
