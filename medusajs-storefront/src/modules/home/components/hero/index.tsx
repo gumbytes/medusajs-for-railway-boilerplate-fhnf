@@ -20,7 +20,7 @@ const Hero = () => {
           </Heading>
         </span>
         <a
-          href="/store">
+          href="https://youtube.com/">
           <h1 className="text-ui-fg-base" style={{ textDecoration: "underline" }}>
             Explore our collections!
           </h1>
