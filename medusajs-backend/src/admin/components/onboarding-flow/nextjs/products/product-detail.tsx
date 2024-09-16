@@ -8,14 +8,14 @@ const ProductDetailNextjs = ({ onNext, isComplete, data }: StepContentProps) => 
     <div>
       <div className="flex flex-col gap-2">
         <Text>
-          We have now created a few sample products in your Medusa store. You can scroll down to see what the Product Detail view looks like in the Admin dashboard.
+          We have now created a few sample products in your Melan store. You can scroll down to see what the Product Detail view looks like in the Admin dashboard.
           This is also the view you use to edit existing products.
         </Text>
         <Text>
           To view the products in your store, you can visit the Next.js Storefront that was installed with <code>create-medusa-app</code>. 
         </Text>
         <Text>
-          The Next.js Storefront Starter is a template that helps you start building an ecommerce store with Medusa. 
+          The Next.js Storefront Starter is a template that helps you start building an ecommerce store with Melan Commerce. 
           You control the code for the storefront and you can customize it further to fit your specific needs.
         </Text>
         <Text>
