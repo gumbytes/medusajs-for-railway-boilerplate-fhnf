@@ -42,20 +42,32 @@ const ADMIN_APP_PORT = process.env.PORT || 7001;
 
 const fileServicePlugin = cloudinaryConfigured
   ? {
-    resolve: `medusa-file-cloudinary`,
-    options: {
-      cloud_name: CLOUDINARY_CLOUD_NAME,
-      api_key: CLOUDINARY_API_KEY,
-      api_secret: CLOUDINARY_API_SECRET,
-      secure: true,
-    },
-  }
+      resolve: `medusa-file-cloudinary`,
+      options: {
+        cloud_name: CLOUDINARY_CLOUD_NAME,
+        api_key: CLOUDINARY_API_KEY,
+        api_secret: CLOUDINARY_API_SECRET,
+        secure: true,
+      },
+    }
   : {
-    resolve: `@medusajs/file-local`,
+      resolve: `@medusajs/file-local`,
+      options: {
+        upload_dir: "uploads",
+      },
+    };
+
+const plugins = [
+  fileServicePlugin, // Add the fileServicePlugin to the plugins array
+  {
+    resolve: `medusa-payment-stripe`,
     options: {
-      upload_dir: "uploads",
+      api_key: process.env.STRIPE_API_KEY,
+      webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
     },
-  };
+  },
+  // other plugins can go here
+];
 
 const plugins = [
   `medusa-fulfillment-manual`,
