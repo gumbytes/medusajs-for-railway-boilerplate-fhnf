@@ -1,5 +1,4 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import { Heading } from "@medusajs/ui"
 
 const Hero = () => {
   return (
@@ -20,10 +19,11 @@ const Hero = () => {
           </Heading>
         </span>
         <a
-          href="https://youtube.com/">
-          <h1 className="text-ui-fg-base" style={{ textDecoration: "underline" }}>
-            Explore our collections!
-          </h1>
+          href="/store"
+          className="text-ui-fg-base"
+          style={{ textDecoration: "underline" }}
+        >
+          <h1>Explore our collections!</h1>
         </a>
       </div>
     </div>
