@@ -3,23 +3,8 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-
-  // Determine if the device is mobile
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize(); // Set initial state
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -33,27 +18,28 @@ const Hero = () => {
     pauseOnHover: false,
   };
 
-  const slides = isMobile
-    ? [
-        { image: "https://media.gumbytes.com/1mobile.png" },
-        { image: "https://media.gumbytes.com/2mobile.png" },
-        { image: "https://media.gumbytes.com/3mobile.png" },
-      ]
-    : [
-        { image: "https://media.gumbytes.com/1.png" },
-        { image: "https://media.gumbytes.com/2.png" },
-        { image: "https://media.gumbytes.com/3.png" },
-      ];
+  const slides = [
+    {
+      image: "https://media.gumbytes.com/1.png",
+    },
+    {
+      image: "https://media.gumbytes.com/2.png",
+    },
+    {
+      image: "https://media.gumbytes.com/3.png",
+    },
+  ];
 
   return (
-    <div className="relative h-[75vh] w-full border-b border-ui-border-base overflow-hidden">
+    <div className="relative h-[75vh] w-full overflow-hidden">
       <Slider {...sliderSettings}>
         {slides.map((slide, index) => (
-          <div key={index} className="relative h-[75vh]">
+          <div key={index}>
             <a href="/store">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${slide.image})` }}
+              <img
+                src={slide.image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-cover"
               />
             </a>
           </div>
