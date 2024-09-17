@@ -1,46 +1,27 @@
-"use client";
-
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import { Heading } from "@medusajs/ui"
 
 const Hero = () => {
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    fade: true,
-    arrows: false,
-    pauseOnHover: false,
-  };
-
-  const slides = [
-    { image: "https://media.gumbytes.com/1.png" },
-    { image: "https://media.gumbytes.com/2.png" },
-    { image: "https://media.gumbytes.com/3.png" },
-  ];
-
   return (
-    <div className="relative h-[75vh] w-full overflow-hidden">
-      <Slider {...sliderSettings}>
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <a href="/store">
-              <img
-                src={slide.image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </a>
-          </div>
-        ))}
-      </Slider>
+    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
+        <span>
+          <Heading
+            level="h1"
+            className="text-3xl leading-10 text-ui-fg-base font-normal"
+          >
+            Welcome to Melan Commerce, Your Destination for Premium Shopping!
+          </Heading>
+        </span>
+        <a
+          href="/store"
+          className="text-ui-fg-base"
+          style={{ textDecoration: "underline" }}
+        >
+          <h1>Explore our collections!</h1>
+        </a>
+      </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
