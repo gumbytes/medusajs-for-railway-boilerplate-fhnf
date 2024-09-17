@@ -19,15 +19,9 @@ const Hero = () => {
   };
 
   const slides = [
-    {
-      image: "https://media.gumbytes.com/1.png",
-    },
-    {
-      image: "https://media.gumbytes.com/2.png",
-    },
-    {
-      image: "https://media.gumbytes.com/3.png",
-    },
+    { image: "https://media.gumbytes.com/1.png" },
+    { image: "https://media.gumbytes.com/2.png" },
+    { image: "https://media.gumbytes.com/3.png" },
   ];
 
   return (
