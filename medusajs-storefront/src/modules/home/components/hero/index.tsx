@@ -2,32 +2,24 @@ import { Heading } from "@medusajs/ui"
 
 const Hero = () => {
   return (
-    <div className="h-[90vh] w-full relative">
-      <div className="text-white absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:text-left small:justify-end small:items-start small:p-32">
-        <h1 className="text-2xl-semi mb-4 drop-shadow-md shadow-black">
-          Introducing the Latest Summer Styles
-        </h1>
-        <p className="text-base-regular max-w-[32rem] mb-6 drop-shadow-md shadow-black">
-          This season, our new summer collection embraces designs to provide
-          comfort and style - ensuring you&apos;re well-prepared for whatever
-          comes your way.
-        </p>
-        <UnderlineLink href="/store">Explore products</UnderlineLink>
+    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
+        <span>
+          <Heading
+            level="h1"
+            className="text-3xl leading-10 text-ui-fg-base font-normal"
+          >
+            Welcome to Melan Commerce, Your Destination for Premium Shopping!
+          </Heading>
+        </span>
+        <a
+          href="/store"
+          className="text-ui-fg-base"
+          style={{ textDecoration: "underline" }}
+        >
+          <h1>Explore our collections!</h1>
+        </a>
       </div>
-      <Image
-        src="https://gumify.shop/new.jpg"
-        loading="eager"
-        priority={true}
-        quality={90}
-        alt="Photo by @thevoncomplex https://unsplash.com/@thevoncomplex"
-        className="absolute inset-0"
-        draggable="false"
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-        }}
-      />
     </div>
   )
 }
